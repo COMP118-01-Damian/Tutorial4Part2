@@ -1,5 +1,5 @@
 /** \file Matrix.cpp
-* * \brief program to check bugs
+* \brief program to check bugs
 * \details The program is inteded to have some logical bugs and the programmer must track them
 * \author Damian Bakowski
 * \version 0.1
@@ -77,3 +77,17 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow) {
 	}
 }
 
+/**
+* <code>fillWithRandomNum</code> fills matrix with random values
+* <BR>
+* @param mat The matrix itself
+* @param maxRow the number of rows of the matrix
+*/
+void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
+{
+	for (int i = 0; i < maxRow; i++) {
+		for (int j = 0; j < MAX_COL; j++) {
+			mat[i][j] = rand();
+		}
+	}
+}

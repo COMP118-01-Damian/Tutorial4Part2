@@ -36,6 +36,7 @@ int main() {
             break;
 
         case 2:
+            fillWithRandomNum(mat, MAX_ROW);
             break;
 
         case 3:
