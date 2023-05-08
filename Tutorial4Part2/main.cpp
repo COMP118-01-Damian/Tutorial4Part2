@@ -13,7 +13,6 @@ using namespace std;
 //Contains user menu and handle user input for selected option
 int main() {
 
-    const int MAX_ROW = 4;
     double mat[MAX_ROW][MAX_COL] = { 1, 2, 3, 4, 5 };
     int option = 0;
     int column;
@@ -50,6 +49,14 @@ int main() {
 
             sumOfCol(mat, column, MAX_ROW);
         case 4:
+            do {
+                cout << "\n Which row to sum up? (1 --" << MAX_ROW << "): ";
+                cin >> column;
+            } while (column < 1 || column > MAX_ROW);
+            cout << "\nSum is: " << sumOfCol(mat, column - 1, MAX_COL);
+            break;
+
+            sumOfCol(mat, column, MAX_COL);
             break;
         case 5:
             break;

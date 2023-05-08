@@ -9,21 +9,7 @@
 
 using namespace std;
 using namespace std;
-/**
-* <code>printMatrix</code> shows the matrix
-* <BR>
-* @param mat The matrix itself
-* @param maxRow the number of rows of the matrix
-*/
-void printMatrix(const double mat[][MAX_COL], const int maxRow) {
-	cout << "\nContent of Matrix is:";
-	for (int i = 0; i < maxRow; i++) {
-		cout << "\nR" << i + 1 << ": ";
-		for (int j = 0; j < MAX_COL; j++) {
-			cout << mat[i][j] << "\t";
-		}
-	}
-}
+
 
 /**
 * <code>sumOfCol</code> Shows the sum of column values
@@ -31,6 +17,7 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow) {
 * @param mat The matrix itself
 * @param column The number of columns in matrix
 * @param maxRow The number of rows of the matrix
+* @return sum Sum of column values
 */
 double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow) {
 
@@ -47,3 +34,44 @@ double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
 
 	return sum;
 }
+
+/**
+* <code>sumOfRow</code> Shows the sum of row values
+* <BR>
+* @param mat The matrix itself
+* @param row The number of columns in matrix
+* @param maxRow The number of rows of the matrix
+* @return sum Sum of column values
+*/
+double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
+{
+	assert(row >= 0 && row < MAX_ROW);
+	assert(maxRow > 0);
+
+	double sum = 0;
+
+
+	for (int i = 0; i < maxRow; i++) {
+
+		sum += mat[row][i];
+	}
+
+	return sum;
+}
+
+/**
+* <code>printMatrix</code> shows the matrix
+* <BR>
+* @param mat The matrix itself
+* @param maxRow the number of rows of the matrix
+*/
+void printMatrix(const double mat[][MAX_COL], const int maxRow) {
+	cout << "\nContent of Matrix is:";
+	for (int i = 0; i < maxRow; i++) {
+		cout << "\nR" << i + 1 << ": ";
+		for (int j = 0; j < MAX_COL; j++) {
+			cout << mat[i][j] << "\t";
+		}
+	}
+}
+
