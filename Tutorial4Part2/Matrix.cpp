@@ -108,3 +108,16 @@ void fillWithGivenNum(double mat[][MAX_COL], const int maxRow)
 		}
 	}
 }
+
+/**
+* <code>getMatrixCell</code> prints one value that corresponds with matrix cell by given row and column
+* <BR>
+* @param mat The matrix itself
+* @param maxRow the number of rows of the matrix
+* @param col Column to read value
+* @param row Row to read value
+*/
+double getMatrixCell(const double mat[][MAX_COL], const int maxRow, const int row, const int col)
+{
+	return mat[row][col];
+}

@@ -20,3 +20,4 @@ double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
 void fillWithRandomNum(double mat[][MAX_COL], const int maxRow);
 void printMatrix(const double mat[][MAX_COL], const int maxRow);
 void fillWithGivenNum(double mat[][MAX_COL], const int maxRow);
+double getMatrixCell(const double mat[][MAX_COL], const int maxRow, const int row, const int col);

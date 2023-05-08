@@ -23,7 +23,7 @@ int main() {
         cout << "\n3): Sum of column";
         cout << "\n4): Sum of row";
         cout << "\n5): Fill with given numbers";
-        cout << "\n6): unimplemented feature - work in progress";
+        cout << "\n6): Print value from given column and row";
         cout << "\n7): unimplemented feature - work in progress";
         cout << "\n8): Exit";
         cout << "\nEnter choice: ";
@@ -63,6 +63,15 @@ int main() {
             fillWithGivenNum(mat, MAX_ROW);
             break;
         case 6:
+            do {
+                cout << "\n From which row print value? (1 --" << MAX_ROW << "): ";
+                cin >> row;
+            } while (row < 1 || row > MAX_ROW);
+            do {
+                cout << "\n From which column print value? (1 --" << MAX_COL << "): ";
+                cin >> column;
+            } while (column < 1 || column > MAX_COL);
+            cout << "\nRow: " << row << ", Column: " << column << " = " << getMatrixCell(mat, MAX_ROW, row, column) << endl;
             break;
         case 7:
             break;
