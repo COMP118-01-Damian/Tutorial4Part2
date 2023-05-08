@@ -1,21 +1,50 @@
+/** \file Matrix.cpp
+* \author Damian Bakowski
+* \version 0.1
+* \date 08.05.2023
+* \bug Contain three logical bugs
+*/
 #include "Matrix.h"
+#include <iostream>
+#include <cassert>
 
-
-
-double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
-{
-	return 0.0;
+using namespace std;
+using namespace std;
+/**
+* <code>printMatrix</code> shows the matrix
+* <BR>
+* @param mat The matrix itself
+* @param maxRow the number of rows of the matrix
+*/
+void printMatrix(const double mat[][MAX_COL], const int maxRow) {
+	cout << "\nContent of Matrix is:";
+	for (int i = 0; i < maxRow; i++) {
+		cout << "\nR" << i + 1 << ": ";
+		for (int j = 0; j < MAX_COL; j++) {
+			cout << mat[i][j] << "\t";
+		}
+	}
 }
 
-double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
-{
-	return 0.0;
-}
+/**
+* <code>sumOfCol</code> Shows the sum of column values
+* <BR>
+* @param mat The matrix itself
+* @param column The number of columns in matrix
+* @param maxRow The number of rows of the matrix
+*/
+double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow) {
 
-void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
-{
-}
+	assert(column >= 0 && column < MAX_COL);
+	assert(maxRow > 0);
 
-void printMatrix(const double mat[][MAX_COL], const int maxRow)
-{
+	double sum = 0;
+
+
+	for (int i = 0; i < maxRow; i++) {
+
+		sum += mat[i][column];
+	}
+
+	return sum;
 }

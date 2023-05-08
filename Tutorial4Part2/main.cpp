@@ -1,47 +1,68 @@
-// main.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/** \file main.cpp
+* \brief program to check bugs
+* \details The program is inteded to have some logical bugs and the programmer must track them
+* \author Damian Bakowski
+* \version 0.1
+* \date 08.05.2023
+*/
 
 #include <iostream>
 #include "Matrix.h"
 using namespace std;
 
 //Contains user menu and handle user input for selected option
-int main()
-{
-    char option;
+int main() {
 
+    const int MAX_ROW = 4;
+    double mat[MAX_ROW][MAX_COL] = { 1, 2, 3, 4, 5 };
+    int option = 0;
+    int column;
 
     do {
-        cout << "\n1) Sum matric rows";
-        cout << "\n2) Sum matrix columns";
-        cout << "\n3) Fill matrix with random numbers";
-        cout << "\n4) Print matrix";
-        cout << "\n5) unimplemented feature - work in progress";
-        cout << "\n6) unimplemented feature - work in progress";
-        cout << "\n7) unimplemented feature - work in progress";
-        cout << "\n8) Quit";
-        cout << "\nEnter a choice: ";
-
+        cout << "\n1): Print Matrix";
+        cout << "\n2): Fill with random numbers";
+        cout << "\n3): Sum of column";
+        cout << "\n4): Sum of row";
+        cout << "\n5): unimplemented feature - work in progress";
+        cout << "\n6): unimplemented feature - work in progress";
+        cout << "\n7): unimplemented feature - work in progress";
+        cout << "\n8): Exit";
+        cout << "\nEnter choice: ";
         cin >> option;
 
         switch (option) {
-        case '1':
+
+        case 1:
+            printMatrix(mat, MAX_ROW);
             break;
-        case '2':
+
+        case 2:
             break;
-        case '3':
+
+        case 3:
+
+            do {
+                cout << "\n Which column to sum up? (1 --" << MAX_COL << "): ";
+                cin >> column;
+            } while (column < 1 || column > MAX_COL);
+            cout << "\nSum is: " << sumOfCol(mat, column - 1, MAX_ROW);
             break;
-        case '4':
+
+            sumOfCol(mat, column, MAX_ROW);
+        case 4:
             break;
-        case '5':
+        case 5:
             break;
-        case '6':
+        case 6:
             break;
-        case '7':
+        case 7:
             break;
+        case 8:
+            break; //No code needed
+
         default:
-            cerr << "\nWrong choice!";
-            break;
+            cerr << "\nWrong choice";
         }
-    } while (option != '8');
+
+    } while (option != 8);
 }
