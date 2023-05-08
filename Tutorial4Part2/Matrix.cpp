@@ -121,3 +121,19 @@ double getMatrixCell(const double mat[][MAX_COL], const int maxRow, const int ro
 {
 	return mat[row][col];
 }
+
+/**
+* <code>reverseValuesOrder</code> reverse order of values in matrix
+* <BR>
+* @param mat The matrix itself
+* @param maxRow the number of rows of the matrix
+*/
+void reverseValuesOrder(double mat[][MAX_COL], const int maxRow)
+{
+	for (int i = 0; i < maxRow; i++) {
+		for (int j = 0; j < MAX_COL; j++) {
+			mat[MAX_ROW-i][MAX_COL-j] = mat[i][j];
+		}
+	}
+}
+

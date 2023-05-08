@@ -24,7 +24,7 @@ int main() {
         cout << "\n4): Sum of row";
         cout << "\n5): Fill with given numbers";
         cout << "\n6): Print value from given column and row";
-        cout << "\n7): unimplemented feature - work in progress";
+        cout << "\n7): Reverse values order in matrix";
         cout << "\n8): Exit";
         cout << "\nEnter choice: ";
         cin >> option;
@@ -51,10 +51,10 @@ int main() {
             sumOfCol(mat, column, MAX_ROW);
         case 4:
             do {
-                cout << "\n Which row to sum up? (1 --" << MAX_ROW << "): ";
-                cin >> row;
-            } while (row < 1 || row > MAX_ROW);
-            cout << "\nSum is: " << sumOfRow(mat, row - 1, MAX_COL);
+                cout << "\n Which column to sum up? (1 --" << MAX_COL << "): ";
+                cin >> column;
+            } while (column < 1 || column > MAX_COL);
+            cout << "\nSum is: " << sumOfCol(mat, column - 1, MAX_ROW);
             break;
 
             sumOfRow(mat, row, MAX_COL);
@@ -74,6 +74,7 @@ int main() {
             cout << "\nRow: " << row << ", Column: " << column << " = " << getMatrixCell(mat, MAX_ROW, row, column) << endl;
             break;
         case 7:
+            reverseValuesOrder(mat, MAX_ROW);
             break;
         case 8:
             break; //No code needed
