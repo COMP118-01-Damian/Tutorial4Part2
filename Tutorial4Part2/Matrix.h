@@ -1,5 +1,6 @@
 /** \file Matrix.h
-
+* \brief program to check bugs
+* \details The program is inteded to have some logical bugs and the programmer must track them
 * \author Damian Bakowski
 * \version 0.1
 * \date 05.08.2023
