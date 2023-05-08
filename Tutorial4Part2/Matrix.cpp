@@ -91,3 +91,20 @@ void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
 		}
 	}
 }
+
+/**
+* <code>fillWithGivenNum</code> fills matrix with values entered by user
+* <BR>
+* @param mat The matrix itself
+* @param maxRow the number of rows of the matrix
+*/
+void fillWithGivenNum(double mat[][MAX_COL], const int maxRow)
+{
+	char val;
+	for (int i = 0; i < maxRow; i++) {
+		for (int j = 0; j < MAX_COL; j++) {
+			cin >> val;
+			mat[i][j] = val;
+		}
+	}
+}

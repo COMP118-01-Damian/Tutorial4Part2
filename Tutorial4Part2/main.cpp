@@ -22,7 +22,7 @@ int main() {
         cout << "\n2): Fill with random numbers";
         cout << "\n3): Sum of column";
         cout << "\n4): Sum of row";
-        cout << "\n5): unimplemented feature - work in progress";
+        cout << "\n5): Fill with given numbers";
         cout << "\n6): unimplemented feature - work in progress";
         cout << "\n7): unimplemented feature - work in progress";
         cout << "\n8): Exit";
@@ -60,6 +60,7 @@ int main() {
             sumOfRow(mat, row, MAX_COL);
             break;
         case 5:
+            fillWithGivenNum(mat, MAX_ROW);
             break;
         case 6:
             break;
