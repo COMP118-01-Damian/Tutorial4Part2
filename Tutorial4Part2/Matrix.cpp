@@ -2,7 +2,6 @@
 * \author Damian Bakowski
 * \version 0.1
 * \date 08.05.2023
-* \bug Contain three logical bugs
 */
 #include "Matrix.h"
 #include <iostream>
