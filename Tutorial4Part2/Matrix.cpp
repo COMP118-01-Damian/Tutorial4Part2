@@ -142,13 +142,31 @@ void reverseValuesOrder(double mat[][MAX_COL], const int maxRow)
 *
 * WARNING: Caller must use delete[] on the return array
 *
-* @return Returns the sums of all columns as a  dynamically created array. Remember to delete[]
+* @return Returns the sums of all columns as a dynamically created array. Remember to delete[]
 */
 double* sumOfCols(const double mat[][MAX_COL], const int maxRow) {
 	double* sums = new double[MAX_COL] {0};
 
 	for (int i = 0; i < MAX_COL; ++i) {
 		sums[i] = sumOfCol(mat, i, maxRow);
+	}
+	return sums;
+	delete sums;
+}
+
+/**
+*
+*
+* WARNING: Caller must use delete[] on the return array
+*
+* @return Returns the sums of all rows as a dynamically created array. Remember to delete[]
+*/
+double* sumOfRows(const double mat[][MAX_COL], const int maxCol)
+{
+	double* sums = new double[MAX_ROW] {0};
+
+	for (int i = 0; i < MAX_ROW; ++i) {
+		sums[i] = sumOfRow(mat, i, maxCol);
 	}
 	return sums;
 	delete sums;
