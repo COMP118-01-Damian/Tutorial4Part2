@@ -47,5 +47,26 @@ namespace Lab5UnitTest
 			Assert::AreEqual(0.0, ptrRet[1]);
 			Assert::AreEqual(0.0, ptrRet[2]);
 		}
+
+		//Used to test GetMatrixCell
+
+		TEST_METHOD(TestMethodGetMatrixCell)
+		{
+			// Arrange
+			double matrix[MAX_ROW][MAX_COL] = { {2, 3, 2, 1},
+				{1, 3, 9, 2},
+				{1, 5, 2, 5},
+				{1, 8, 3, 1} };
+			double value;
+
+			// Act
+			for (int i = 0; i < MAX_ROW; i++) {
+				for (int j = 0; j < MAX_COL; j++) {
+					value = getMatrixCell(matrix, MAX_ROW, i, j);
+			// Assert
+					Assert::AreEqual(value, matrix[i][j]);
+				}
+			}
+		}
 	};
 }
