@@ -87,7 +87,7 @@ void fillWithRandomNum(double mat[][MAX_COL], const int maxRow)
 {
 	for (int i = 0; i < maxRow; i++) {
 		for (int j = 0; j < MAX_COL; j++) {
-			mat[i][j] = rand();
+			mat[i][j] = rand()%1000;
 		}
 	}
 }
