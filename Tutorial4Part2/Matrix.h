@@ -7,9 +7,8 @@
 */
 
 #pragma once
-#ifdef MATRIX_H
+#ifndef MATRIX_H
 #define MATRIX_H
-#endif // MATRIX_H
 //Constants
 const int MAX_COL = 4;
 const int MAX_ROW = 4;
@@ -22,3 +21,6 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow);
 void fillWithGivenNum(double mat[][MAX_COL], const int maxRow);
 double getMatrixCell(const double mat[][MAX_COL], const int maxRow, const int row, const int col);
 void reverseValuesOrder(double mat[][MAX_COL], const int maxRow);
+double* sumOfCols(const double mat[][MAX_COL], const int maxRow);
+
+#endif // MATRIX_H

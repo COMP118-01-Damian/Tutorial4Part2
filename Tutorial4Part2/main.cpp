@@ -25,7 +25,8 @@ int main() {
         cout << "\n5): Fill with given numbers";
         cout << "\n6): Print value from given column and row";
         cout << "\n7): Reverse values order in matrix";
-        cout << "\n8): Exit";
+        cout << "\n8): Sum of columns";
+        cout << "\n9): Exit";
         cout << "\nEnter choice: ";
         cin >> option;
 
@@ -77,11 +78,19 @@ int main() {
             reverseValuesOrder(mat, MAX_ROW);
             break;
         case 8:
+            double* sums;
+            sums = sumOfCols(mat, MAX_ROW);
+
+            for (int i = 0; i < MAX_COL; ++i) {
+                cout << "\nSum of " << i + 1 << ": " << sums[i];
+            }
+            break;
+        case 9:
             break; //No code needed
 
         default:
             cerr << "\nWrong choice";
         }
 
-    } while (option != 8);
+    } while (option != 9);
 }
