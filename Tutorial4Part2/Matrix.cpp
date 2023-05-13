@@ -119,7 +119,7 @@ void fillWithGivenNum(double mat[][MAX_COL], const int maxRow)
 */
 double getMatrixCell(const double mat[][MAX_COL], const int maxRow, const int row, const int col)
 {
-	return mat[row][col];
+	return mat[row - 1][col - 1];
 }
 
 /**
