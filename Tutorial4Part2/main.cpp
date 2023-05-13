@@ -52,10 +52,10 @@ int main() {
             sumOfCol(mat, column, MAX_ROW);
         case 4:
             do {
-                cout << "\n Which column to sum up? (1 --" << MAX_COL << "): ";
-                cin >> column;
-            } while (column < 1 || column > MAX_COL);
-            cout << "\nSum is: " << sumOfCol(mat, column - 1, MAX_ROW);
+                cout << "\n Which row to sum up? (1 --" << MAX_ROW << "): ";
+                cin >> row;
+            } while (row < 1 || row > MAX_ROW);
+            cout << "\nSum is: " << sumOfRow(mat, row - 1, MAX_COL);
             break;
 
             sumOfRow(mat, row, MAX_COL);
